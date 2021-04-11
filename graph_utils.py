@@ -133,12 +133,12 @@ def bellmanford(graph, origin, destination):
 def make_graph(vertexes_dir, edges_dir):
     g = Graph()
     idx_to_city = dict()
-    with open(vertexes_dir, 'r') as m:
+    with open(vertexes_dir, 'r', encoding='utf-32') as m:
         for i, line in enumerate(m):
             city = line.replace('\n', '')
             g.insert_vertex(city)
             idx_to_city[i] = city
-    with open(edges_dir, 'r') as db:
+    with open(edges_dir, 'r', encoding='utf-32') as db:
         for line in db:
             road = line.replace('\n', '').split()
             g.insert_edge(idx_to_city[int(road[0])], idx_to_city[int(road[1])], float(road[2]))
