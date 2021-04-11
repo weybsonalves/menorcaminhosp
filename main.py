@@ -1,7 +1,7 @@
 import streamlit as st
 from graph_utils import make_graph, dijkstra
 
-st.set_page_config(page_title='Shelby')
+st.set_page_config(page_title='menorcaminhosp')
 
 def main():
     g = make_graph('municipios_sp.txt', 'distancias_municipios_sp.txt')
